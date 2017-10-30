@@ -4,11 +4,7 @@ const rp = require('request-promise');
 const cheerio = require('cheerio');
 const assert = require('assert');
 
-const TURNITIN_EMAIL = process.env.TURNITIN_EMAIL;
-const TURNITIN_PW = process.env.TURNITIN_PW;
-
 const USER_AGENT = 'Robot; wgoodall01@gmail.com';
-
 const BASE_URL = 'https://turnitin.com';
 
 const swallowErrors = async prom => {
@@ -19,15 +15,15 @@ const swallowErrors = async prom => {
   }
 };
 
-async function login(cookieJar) {
+async function login(cookieJar, email, password) {
   const options = {
     method: 'POST',
     uri: `${BASE_URL}/login_page.asp?lang=en_us`,
     form: {
       submit: 'Login',
       javascript_enabled: '0',
-      email: TURNITIN_EMAIL,
-      user_password: TURNITIN_PW
+      email: email,
+      user_password: password
     },
     jar: cookieJar,
     headers: {'User-Agent': USER_AGENT},
@@ -166,46 +162,29 @@ async function getAssignments(cookieJar, url) {
   return assignments;
 }
 
-async function main() {
+async function loadData(path) {
+  const fileStr = await util.promisify(fs.readFile)(path);
+  return JSON.parse(fileStr);
+}
+
+async function saveData(path, data) {
+  const fileStr = JSON.stringify(data, null, 2);
+  await util.promisify(fs.writeFile)(path, fileStr);
+}
+
+exports.fetch = async function fetch(email, password) {
   const cookieJar = rp.jar();
 
-  console.time('turnitin fetch');
-
   // Log in to turnitin
-  console.log('Logging in...');
-  await login(cookieJar);
-  console.log('done.\n');
+  await login(cookieJar, email, password);
 
   // Get list of courses
-  console.log('Fetching list of courses...');
   let courses = await getCourseList(cookieJar);
-  console.log('done.\n');
 
   // Fetch each course's assignments...
-  console.log('Fetching course info...');
   for (course of courses) {
     course.assignments = await getAssignments(cookieJar, course.url);
   }
-  console.log('done\n');
 
-  console.timeEnd('turnitin fetch');
-
-  // Print everything out nicely
-  for (c of courses) {
-    console.log('\n' + c.name);
-    console.group();
-    for (a of c.assignments) {
-      console.log(
-        `${a.name}: graded=${a.isGraded}, similar=${a.similarity}, score=${a.points}, total=${a.total}`
-      );
-    }
-    console.groupEnd();
-  }
-}
-
-main()
-  .then(x => console.log('\n[ done ]'))
-  .catch(e => {
-    console.log('\n [error]\n');
-    console.log(e);
-  });
+  return courses;
+};
