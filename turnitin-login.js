@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+require('dotenv').config();
 const rp = require('request-promise');
 const cheerio = require('cheerio');
 const assert = require('assert');
