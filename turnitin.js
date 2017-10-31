@@ -136,6 +136,9 @@ async function getAssignments(cookieJar, url) {
       const isGraded = coursePage(e).find('.btn.view-btn.btn-primary').length == 1;
 
       assignments[i] = {
+        id: coursePage(e)
+          .attr('id')
+          .replace('assignment_', ''),
         name: getInfo('.assignment-title'),
         similarity: parseFloat(getInfo('.similarity .or-percentage').replace('%', '')) || null,
         isGraded,
@@ -160,16 +163,6 @@ async function getAssignments(cookieJar, url) {
   }
 
   return assignments;
-}
-
-async function loadData(path) {
-  const fileStr = await util.promisify(fs.readFile)(path);
-  return JSON.parse(fileStr);
-}
-
-async function saveData(path, data) {
-  const fileStr = JSON.stringify(data, null, 2);
-  await util.promisify(fs.writeFile)(path, fileStr);
 }
 
 exports.fetch = async function fetch(email, password) {
