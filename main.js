@@ -38,7 +38,7 @@ async function main() {
     });
   }
 
-  if (differences.length > 0) {
+  if (differences.length === 0) {
     console.log('Not saving store, no new data.');
   } else {
     console.log('Saving store...');
