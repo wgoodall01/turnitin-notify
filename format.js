@@ -16,7 +16,8 @@ function formatMessage(d) {
     : '';
   switch (type) {
     case 'new_assignment':
-      return `New Assignment in '${course.name}': '${pair.new.name}'`;
+      return `New Assignment in ${course.name}: '${pair.new.name}' due ${pair.new.due.date} ${pair
+        .new.due.time}`;
     case 'removed_assignment':
       return `Removed assignment '${pair.old.name}'`;
     case 'graded_assignment':
