@@ -35,18 +35,18 @@ function compareCourses(courses, latest) {
       // - created/deleted assignments
       // - any changed assignment attr
       const idMap = {};
-      for (a of oldCourse.assignments) {
+      for (const a of oldCourse.assignments) {
         const id = a.id;
         idMap[id] = idMap[id] || {};
         idMap[id].old = a;
       }
-      for (a of newCourse.assignments) {
+      for (const a of newCourse.assignments) {
         const id = a.id;
         idMap[id] = idMap[id] || {};
         idMap[id].new = a;
       }
 
-      for (id of Object.keys(idMap)) {
+      for (const id of Object.keys(idMap)) {
         const pair = idMap[id];
         const courseDifferences = compareAssignments(pair);
         const withCourse = courseDifferences.map(e => ({...e, course: newCourse}));

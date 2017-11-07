@@ -1,8 +1,8 @@
 function formatCourses(courses) {
   let msg = '';
-  for (c of courses) {
+  for (const c of courses) {
     msg += '\n' + c.name;
-    for (a of c.assignments) {
+    for (const a of c.assignments) {
       msg += `\t${a.name}: graded=${a.isGraded}, similar=${a.similarity}, score=${a.points}, total=${a.total}\n`;
     }
   }

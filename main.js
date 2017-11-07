@@ -29,7 +29,7 @@ async function main() {
   let differences = compareCourses(courses, latest);
 
   console.log('Sending diff notifications...');
-  for (d of differences) {
+  for (const d of differences) {
     console.log('format', JSON.stringify(d, null, 2));
     await twilioClient.messages.create({
       body: formatMessage(d),

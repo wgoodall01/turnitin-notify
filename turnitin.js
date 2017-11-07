@@ -39,7 +39,7 @@ async function login(cookieJar, email, password) {
   const status = loginResp.statusCode;
 
   assert(loginRespBody('.error').length == 0, 'turnitin login error');
-  assert(loginResp.statusCode === 200, 'response status is not 200');
+  assert(status === 200, 'response status is not 200');
   const hasSession =
     cookieJar.getCookies(BASE_URL).filter(e => e.key === 'session-id').length === 1;
   assert(hasSession, 'must be cookied with session-id');
@@ -175,7 +175,7 @@ exports.fetch = async function fetch(email, password) {
   let courses = await getCourseList(cookieJar);
 
   // Fetch each course's assignments...
-  for (course of courses) {
+  for (let course of courses) {
     course.assignments = await getAssignments(cookieJar, course.url);
   }
 
