@@ -20,8 +20,6 @@ async function login(cookieJar, email, password) {
     method: 'POST',
     uri: `${BASE_URL}/login_page.asp?lang=en_us`,
     form: {
-      submit: 'Login',
-      javascript_enabled: '0',
       email: email,
       user_password: password
     },
@@ -38,7 +36,7 @@ async function login(cookieJar, email, password) {
   const loginRespBody = cheerio.load(loginResp.body);
   const status = loginResp.statusCode;
 
-  assert(loginRespBody('.error').length == 0, 'turnitin login error');
+  assert(loginRespBody('#ibox_form .error').length == 0, 'turnitin login error');
   assert(status === 200, 'response status is not 200');
   const hasSession =
     cookieJar.getCookies(BASE_URL).filter(e => e.key === 'session-id').length === 1;
@@ -165,7 +163,7 @@ async function getAssignments(cookieJar, url) {
   return assignments;
 }
 
-exports.fetch = async function fetch(email, password) {
+async function fetch(email, password) {
   const cookieJar = rp.jar();
 
   // Log in to turnitin
@@ -180,4 +178,12 @@ exports.fetch = async function fetch(email, password) {
   }
 
   return courses;
+}
+
+module.exports = {
+  fetch,
+  login,
+  getCourseList,
+  getGrades,
+  getAssignments
 };
