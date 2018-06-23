@@ -1,14 +1,22 @@
 {
   "name": "turnitin-notify",
+  "private": true,
   "version": "1.0.0",
-  "description": "Get notifications from Turnitin.",
+  "description": "Get notifications from turnitin",
   "main": "index.js",
+  "repository": "git@github.com:wgoodall01/turnitin-notify.git",
+  "author": "William Goodall <wgoodall01@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nf start -j Procfile.dev",
+    "migrate": "cd db && yarn run --silent migrate",
+    "db": "./dev/pgstart.sh"
+  },
+  "workspaces": ["server", "client", "db"],
+  "devDependencies": {
+    "@heroku/foreman": "^2.0.2"
+  },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "dotenv": "^4.0.0",
-    "request": "^2.83.0",
-    "request-promise": "^4.2.2",
-    "twilio": "^3.9.1"
+    "graphql": "0.13.0"
   }
 }

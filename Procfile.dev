@@ -1,0 +1,3 @@
+sql: ./dev/pgstart.sh
+web: (cd client && PORT=3000 yarn run --silent start)
+api: (cd server && PORT=8080 SERVER_DATABASE_URL="postgres://localhost:5432" yarn run --silent dev)

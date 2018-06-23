@@ -1,0 +1,13 @@
+{
+  "name": "db",
+  "version": "1.0.0",
+  "main": "db.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "knex": "^0.14.4"
+  },
+  "scripts": {
+    "migrate": "knex migrate:latest"
+  }
+}
