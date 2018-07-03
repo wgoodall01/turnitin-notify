@@ -1,3 +1,5 @@
+const omit = require('lodash/omit');
+
 const compareDates = (a, b) => a.date === b.date && a.time === b.time;
 
 function compareAssignments(pair) {
@@ -24,36 +26,53 @@ function compareAssignments(pair) {
   return differences;
 }
 
-function compareCourses(courses, latest) {
-  let differences = [];
-  if (latest != null) {
-    for (let i = 0; i < courses.length; i++) {
-      let oldCourse = latest.courses[i];
-      let newCourse = courses[i];
+function byId(pair) {
+  const idMap = {};
+  Object.entries({new: pair.new, old: pair.old}).forEach(([kind, list]) => {
+    list.forEach(e => {
+      idMap[e.id] = idMap[e.id] || {};
+      idMap[e.id][kind] = e;
+    });
+  });
 
-      // Find:
-      // - created/deleted assignments
-      // - any changed assignment attr
-      const idMap = {};
-      for (const a of oldCourse.assignments) {
-        const id = a.id;
-        idMap[id] = idMap[id] || {};
-        idMap[id].old = a;
-      }
-      for (const a of newCourse.assignments) {
-        const id = a.id;
-        idMap[id] = idMap[id] || {};
-        idMap[id].new = a;
-      }
+  return idMap;
+}
 
-      for (const id of Object.keys(idMap)) {
-        const pair = idMap[id];
-        const courseDifferences = compareAssignments(pair);
-        const withCourse = courseDifferences.map(e => ({...e, course: newCourse}));
-        differences = differences.concat(withCourse);
-      }
-    }
+function compareCourses(old, latest) {
+  // If there isn't a previous set of courses,
+  // don't return any differences.
+  if (old === null) {
+    return [];
   }
+
+  let differences = [];
+
+  const courseMap = byId({new: latest, old: old});
+  console.log('courseMap:', courseMap);
+
+  Object.entries(courseMap).forEach(([id, courseDelta]) => {
+    console.log(courseDelta);
+    if (courseDelta.new && !courseDelta.old) {
+      return [{type: 'new_course', courseDelta}];
+    } else if (courseDelta.old && !courseDelta.new) {
+      return [{type: 'removed_course', courseDelta}];
+    } else {
+      const assignmentMap = byId({
+        new: courseDelta.new.assignments,
+        old: courseDelta.old.assignments
+      });
+
+      Object.entries(assignmentMap).forEach(([id, assignmentDelta]) => {
+        differences = differences.concat(
+          compareAssignments(assignmentDelta).map(e => ({
+            ...e,
+            course: omit(courseDelta.new, 'assignments')
+          })) // add a reference to the course, without any assignments.
+        );
+      });
+    }
+  });
+
   return differences;
 }
 

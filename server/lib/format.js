@@ -3,7 +3,9 @@ function formatCourses(courses) {
   for (const c of courses) {
     msg += '\n' + c.name;
     for (const a of c.assignments) {
-      msg += `\t${a.name}: graded=${a.isGraded}, similar=${a.similarity}, score=${a.points}, total=${a.total}\n`;
+      msg += `\t${a.name}: graded=${a.isGraded}, similar=${a.similarity}, score=${
+        a.points
+      }, total=${a.total}\n`;
     }
   }
 }
@@ -16,18 +18,17 @@ function formatMessage(d) {
     : '';
   switch (type) {
     case 'new_assignment':
-      return `New Assignment in ${course.name}: '${pair.new.name}' due ${pair.new.due.date} ${pair
-        .new.due.time}`;
+      return `New Assignment in ${course.name}: '${pair.new.name}' due ${pair.new.due}`;
     case 'removed_assignment':
       return `Removed assignment '${pair.old.name}'`;
     case 'graded_assignment':
       return `'${pair.new.name}' was graded. ${grade}`;
     case 'change_start':
-      return `'${pair.new.name}' now opens on ${pair.new.start.date} ${pair.new.start.time}`;
+      return `'${pair.new.name}' now opens on ${pair.new.start}`;
     case 'change_due':
-      return `'${pair.new.name}' is now due on ${pair.new.due.date} ${pair.new.due.time}`;
+      return `'${pair.new.name}' is now due on ${pair.new.due}`;
     case 'change_post':
-      return `'${pair.new.name}' now posts on ${pair.new.post.date} ${pair.new.post.time}`;
+      return `'${pair.new.name}' now posts on ${pair.new.post}`;
     default:
       throw new Error("Couldn't format message");
   }

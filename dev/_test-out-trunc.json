@@ -1,0 +1,523 @@
+[
+  {
+    "id": "16379807",
+    "url":
+      "s_class_portfolio.asp?r=69.4776713849979&svr=319&lang=en_us&aid=21400&cid=16379807",
+    "name": "AP Chemistry 2017-18 (Block 1)",
+    "status": "Expired",
+    "instructor": "Tom Holt",
+    "assignments": [
+      {
+        "id": "62501285",
+        "due": "2017-09-28T18:05:00.000Z",
+        "name": "Revision 1: Determination of percent Cu in brass shell",
+        "post": "2017-10-05T19:45:00.000Z",
+        "start": "2017-09-26T16:13:00.000Z",
+        "total": 25,
+        "points": 24,
+        "isGraded": true,
+        "similarity": 6,
+        "submissionTitle": "Lab Final"
+      },
+      {
+        "id": "62929869",
+        "due": "2017-10-17T16:45:00.000Z",
+        "name": "Ca in Antacid Tablet Procedure",
+        "post": "2017-10-28T17:45:00.000Z",
+        "start": "2017-10-11T18:12:00.000Z",
+        "total": 15,
+        "points": null,
+        "isGraded": false,
+        "similarity": 6,
+        "submissionTitle": "things"
+      },
+      {
+        "id": "63784945",
+        "due": "2017-11-10T21:00:00.000Z",
+        "name": "Redox Titration Procedure - H2O2",
+        "post": "2017-12-06T21:00:00.000Z",
+        "start": "2017-11-10T01:47:00.000Z",
+        "total": 20,
+        "points": 20,
+        "isGraded": true,
+        "similarity": 7,
+        "submissionTitle": "redox titration mk. 2"
+      }
+    ]
+  },
+  {
+    "id": "17384251",
+    "url":
+      "s_class_portfolio.asp?r=69.4776713849979&svr=319&lang=en_us&aid=21400&cid=17384251",
+    "name": "AP Lang Block 6",
+    "status": "Active",
+    "instructor": "Marianne Burke Burke",
+    "assignments": [
+      {
+        "id": "66065694",
+        "due": "2018-02-01T15:53:00.000Z",
+        "name": "in-class rhetorical analysis",
+        "post": "2018-02-01T20:00:00.000Z",
+        "start": "2018-02-01T15:19:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": false,
+        "similarity": 4,
+        "submissionTitle": "Challenger disaster in-class w..."
+      },
+      {
+        "id": "66478833",
+        "due": "2018-02-15T14:45:00.000Z",
+        "name": "Boo Rhetorical Analysis",
+        "post": "2018-02-15T20:00:00.000Z",
+        "start": "2018-02-15T13:30:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": false,
+        "similarity": 10,
+        "submissionTitle": "Forevers rhetorical analysis"
+      },
+      {
+        "id": "66631428",
+        "due": "2018-02-21T18:05:00.000Z",
+        "name": "Paragraph  Assessment",
+        "post": "2018-02-21T20:00:00.000Z",
+        "start": "2018-02-20T19:14:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": false,
+        "similarity": null,
+        "submissionTitle": "Cause and Effect"
+      },
+      {
+        "id": "67112030",
+        "due": "2018-03-09T18:45:00.000Z",
+        "name": "Visual Rhetorical Analysis Paper",
+        "post": "2018-03-09T20:00:00.000Z",
+        "start": "2018-03-08T16:18:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": false,
+        "similarity": null,
+        "submissionTitle": "Thanksgiving"
+      },
+      {
+        "id": "67936840",
+        "due": "2018-04-10T13:52:00.000Z",
+        "name": "in-class Open Argument essay",
+        "post": "2018-04-10T14:15:00.000Z",
+        "start": "2018-04-10T13:17:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": false,
+        "similarity": null,
+        "submissionTitle": "Disobedience essay"
+      },
+      {
+        "id": "68630271",
+        "due": "2018-05-04T18:10:00.000Z",
+        "name": "Synthesis Essay",
+        "post": "2018-05-04T20:00:00.000Z",
+        "start": "2018-05-04T10:46:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": false,
+        "similarity": null,
+        "submissionTitle": "The Platform Economy: Moving t..."
+      },
+      {
+        "id": "69183588",
+        "due": "2018-05-25T20:00:00.000Z",
+        "name": "Narrative Essay",
+        "post": "2018-05-25T21:00:00.000Z",
+        "start": "2018-05-25T11:05:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": false,
+        "similarity": null,
+        "submissionTitle": "Narrative Essay"
+      }
+    ]
+  },
+  {
+    "id": "16181631",
+    "url":
+      "s_class_portfolio.asp?r=69.4776713849979&svr=319&lang=en_us&aid=21400&cid=16181631",
+    "name": "Physics 1 Honors 2017-2018, Block 3",
+    "status": "Expired",
+    "instructor": "Tim Lynch",
+    "assignments": [
+      {
+        "id": "62432007",
+        "due": "2017-09-26T13:00:00.000Z",
+        "name": "Lab 1: Graphs of Motion",
+        "post": "2017-10-02T05:00:00.000Z",
+        "start": "2017-09-24T12:16:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": 26,
+        "submissionTitle": "Motion Lab"
+      },
+      {
+        "id": "62832520",
+        "due": "2017-10-11T19:10:00.000Z",
+        "name": "Lab 2: Acceleration of a Hot-Wheels™ Car",
+        "post": "2017-10-16T05:00:00.000Z",
+        "start": "2017-10-08T16:28:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": 13,
+        "submissionTitle": "Hot Wheels Lab"
+      },
+      {
+        "id": "62995411",
+        "due": "2017-10-17T18:05:00.000Z",
+        "name": "Lab 3 Prelab",
+        "post": "2017-10-21T05:00:00.000Z",
+        "start": "2017-10-13T17:13:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": false,
+        "similarity": 17,
+        "submissionTitle": "Freefall pre-lab"
+      },
+      {
+        "id": "63136706",
+        "due": "2017-11-02T14:50:00.000Z",
+        "name": "Lab 3: Acceleration of a Free-Falling Object",
+        "post": "2017-10-26T05:00:00.000Z",
+        "start": "2017-10-18T19:50:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": 16,
+        "submissionTitle": "Acceleration Lab"
+      },
+      {
+        "id": "64230263",
+        "due": "2017-11-30T13:00:00.000Z",
+        "name": "Lab 4 Prelab",
+        "post": "2017-12-04T05:00:00.000Z",
+        "start": "2017-11-28T14:10:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": null,
+        "submissionTitle": "does anyone ever read these ti..."
+      },
+      {
+        "id": "64548949",
+        "due": "2017-12-12T13:00:00.000Z",
+        "name": "Lab 4: Rocket Science ... more or less",
+        "post": "2017-12-16T05:00:00.000Z",
+        "start": "2017-12-08T19:29:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": 24,
+        "submissionTitle": "this is actually as long as my..."
+      },
+      {
+        "id": "64849833",
+        "due": "2018-01-08T20:00:00.000Z",
+        "name":
+          "Lab Rewrite (please indicate in the filename which lab it is!)",
+        "post": "2017-12-27T05:00:00.000Z",
+        "start": "2017-12-19T17:44:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": false,
+        "similarity": null,
+        "submissionTitle": null
+      },
+      {
+        "id": "65781036",
+        "due": "2018-01-25T13:00:00.000Z",
+        "name": "Mini-Lab: Springing Into Action",
+        "post": "2018-01-31T05:00:00.000Z",
+        "start": "2018-01-23T16:44:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": 21,
+        "submissionTitle": "Springiness again"
+      },
+      {
+        "id": "68071784",
+        "due": "2018-04-19T18:05:00.000Z",
+        "name": "Senior Culminating Activity",
+        "post": "2018-04-23T05:00:00.000Z",
+        "start": "2018-04-15T12:30:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": false,
+        "similarity": null,
+        "submissionTitle": null
+      },
+      {
+        "id": "68449811",
+        "due": "2018-05-01T18:05:00.000Z",
+        "name": "Lab 5 Prelab (First Draft)",
+        "post": "2018-05-05T05:00:00.000Z",
+        "start": "2018-04-27T17:30:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": false,
+        "similarity": 10,
+        "submissionTitle": "totally on time and 100% not l..."
+      },
+      {
+        "id": "68539969",
+        "due": "2018-05-03T13:00:00.000Z",
+        "name": "Lab 5 Prelab (Final Draft)",
+        "post": "2018-05-07T05:00:00.000Z",
+        "start": "2018-05-01T18:00:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": 13,
+        "submissionTitle": "This one is also totally not l..."
+      },
+      {
+        "id": "68690608",
+        "due": "2018-05-09T16:10:00.000Z",
+        "name": "Lab 5: Energy and Efficiency",
+        "post": "2018-05-15T05:00:00.000Z",
+        "start": "2018-05-07T14:26:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": 11,
+        "submissionTitle": "ok I did actually proofread th..."
+      },
+      {
+        "id": "68916850",
+        "due": "2018-05-18T14:50:00.000Z",
+        "name": "Lab 6 Pre-Lab",
+        "post": "2018-05-23T05:00:00.000Z",
+        "start": "2018-05-15T13:58:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": false,
+        "similarity": 24,
+        "submissionTitle": "prelab"
+      },
+      {
+        "id": "69097837",
+        "due": "2018-05-24T17:30:00.000Z",
+        "name": "Lab 6: Elastic and Inelastic Collisions",
+        "post": "2018-05-30T05:00:00.000Z",
+        "start": "2018-05-22T09:52:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": 29,
+        "submissionTitle": "Momentum lab"
+      }
+    ]
+  },
+  {
+    "id": "16162216",
+    "url":
+      "s_class_portfolio.asp?r=69.4776713849979&svr=319&lang=en_us&aid=21400&cid=16162216",
+    "name": "US History Honors (17-18) (Block 8)",
+    "status": "Expired",
+    "instructor": "David Korfhage",
+    "assignments": [
+      {
+        "id": "61939499",
+        "due": "2017-09-09T04:59:00.000Z",
+        "name": "Junior thesis: three topics",
+        "post": "2017-09-13T01:00:00.000Z",
+        "start": "2017-09-06T23:28:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": null,
+        "submissionTitle": "some topics"
+      },
+      {
+        "id": "62210630",
+        "due": "2017-09-20T04:59:00.000Z",
+        "name": "Junior thesis: research proposal",
+        "post": "2017-09-25T04:59:00.000Z",
+        "start": "2017-09-15T19:03:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": 26,
+        "submissionTitle": "RP"
+      },
+      {
+        "id": "62556201",
+        "due": "2017-09-29T04:59:00.000Z",
+        "name": "Junior thesis: research question",
+        "post": "2017-10-03T04:59:00.000Z",
+        "start": "2017-09-28T00:22:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": null,
+        "submissionTitle": "topic"
+      },
+      {
+        "id": "63127524",
+        "due": "2017-10-21T04:59:00.000Z",
+        "name": "Junior thesis: annotated bibliography",
+        "post": "2017-10-25T05:00:00.000Z",
+        "start": "2017-10-18T16:06:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": 22,
+        "submissionTitle": "Annotated Bibliography"
+      },
+      {
+        "id": "63598601",
+        "due": "2017-11-09T04:59:00.000Z",
+        "name": "Junior thesis: thesis and outline",
+        "post": "2017-11-16T05:00:00.000Z",
+        "start": "2017-11-03T14:53:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": 8,
+        "submissionTitle": "Outline!"
+      },
+      {
+        "id": "64358129",
+        "due": "2017-12-05T04:59:00.000Z",
+        "name": "Junior thesis: partial draft",
+        "post": "2017-12-13T05:00:00.000Z",
+        "start": "2017-12-02T21:18:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": 6,
+        "submissionTitle": "half draft"
+      },
+      {
+        "id": "64470675",
+        "due": "2017-12-09T04:59:00.000Z",
+        "name": "New Deal in class essay",
+        "post": "2017-12-22T05:00:00.000Z",
+        "start": "2017-12-06T17:29:00.000Z",
+        "total": 50,
+        "points": null,
+        "isGraded": false,
+        "similarity": 1,
+        "submissionTitle": "my fingers are on fire after t..."
+      },
+      {
+        "id": "65070289",
+        "due": "2018-01-05T16:05:00.000Z",
+        "name": "Economic history blog post",
+        "post": "2018-01-16T05:00:00.000Z",
+        "start": "2018-01-03T19:24:00.000Z",
+        "total": 75,
+        "points": 61,
+        "isGraded": true,
+        "similarity": 2,
+        "submissionTitle": "Blog post"
+      },
+      {
+        "id": "65727803",
+        "due": "2018-01-26T16:50:00.000Z",
+        "name": "Slavery short discussion paper",
+        "post": "2018-01-30T05:00:00.000Z",
+        "start": "2018-01-22T12:45:00.000Z",
+        "total": 3,
+        "points": null,
+        "isGraded": false,
+        "similarity": null,
+        "submissionTitle": "Slavery discussion"
+      },
+      {
+        "id": "65728321",
+        "due": "2018-01-30T04:59:00.000Z",
+        "name": "Junior thesis: full draft",
+        "post": "2018-02-08T04:59:00.000Z",
+        "start": "2018-01-22T13:11:00.000Z",
+        "total": 0,
+        "points": null,
+        "isGraded": true,
+        "similarity": 6,
+        "submissionTitle": "it's 1:24am right now"
+      },
+      {
+        "id": "66143705",
+        "due": "2018-02-05T16:05:00.000Z",
+        "name": "Slavery blog post",
+        "post": "2018-02-12T05:00:00.000Z",
+        "start": "2018-02-05T01:11:00.000Z",
+        "total": 30,
+        "points": null,
+        "isGraded": false,
+        "similarity": 6,
+        "submissionTitle": "Slavery gallery text"
+      },
+      {
+        "id": "66478381",
+        "due": "2018-02-21T16:45:00.000Z",
+        "name": "Optiona 12 Years a Slave assignment",
+        "post": "2018-02-26T05:00:00.000Z",
+        "start": "2018-02-15T13:13:00.000Z",
+        "total": 5,
+        "points": null,
+        "isGraded": false,
+        "similarity": null,
+        "submissionTitle": null
+      },
+      {
+        "id": "66487596",
+        "due": "2018-02-26T14:45:00.000Z",
+        "name": "Junior thesis: final paper",
+        "post": "2018-02-28T05:00:00.000Z",
+        "start": "2018-02-15T17:11:00.000Z",
+        "total": 100,
+        "points": null,
+        "isGraded": false,
+        "similarity": 9,
+        "submissionTitle": "this is terrifying"
+      },
+      {
+        "id": "68134345",
+        "due": "2018-04-20T14:05:00.000Z",
+        "name": "Black history blog post",
+        "post": "2018-04-30T05:00:00.000Z",
+        "start": "2018-04-17T14:46:00.000Z",
+        "total": 75,
+        "points": null,
+        "isGraded": false,
+        "similarity": 5,
+        "submissionTitle": "black history blog post with e..."
+      },
+      {
+        "id": "68290802",
+        "due": "2018-04-26T13:00:00.000Z",
+        "name": "Imperialism debate brief",
+        "post": "2018-05-09T05:00:00.000Z",
+        "start": "2018-04-23T13:46:00.000Z",
+        "total": 50,
+        "points": null,
+        "isGraded": false,
+        "similarity": null,
+        "submissionTitle": "wilson"
+      },
+      {
+        "id": "68882657",
+        "due": "2018-05-14T15:50:00.000Z",
+        "name": "WWII & Cold War essay",
+        "post": "2018-05-22T05:00:00.000Z",
+        "start": "2018-05-14T15:09:00.000Z",
+        "total": 50,
+        "points": null,
+        "isGraded": false,
+        "similarity": null,
+        "submissionTitle": "Cold War Essay"
+      }
+    ]
+  }
+]

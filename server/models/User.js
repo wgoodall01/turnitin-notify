@@ -2,12 +2,21 @@ import pick from 'lodash/pick';
 import assert from 'assert';
 
 class User {
-  _fields = ['id', 'turnitinEmail', 'turnitinPassword', 'phone', 'prefs', 'updated', 'courses'];
+  _fields = [
+    'id',
+    'turnitinEmail',
+    'turnitinPassword',
+    'turnitinTz',
+    'phone',
+    'prefs',
+    'updated',
+    'courses'
+  ];
 
   constructor(props, ctx) {
     this._ctx = ctx || {};
 
-    const defaults = {prefs: {}, courses: [], updated: null};
+    const defaults = {prefs: {}, courses: null, updated: null};
     Object.assign(this, defaults, pick(props, this._fields));
     assert(this.id, 'User must have `id`');
     assert(this.turnitinEmail, 'User must have `turnitinEmail`');
@@ -30,7 +39,8 @@ class User {
   }
 
   async save() {
-    const data = pick(this, this._fields);
+    // Stringify the courses, so node-postgres doesn't think it's a pg array.
+    const data = {...pick(this, this._fields), courses: JSON.stringify(this.courses)};
 
     // Try updating
     const rowsChanged = await this._ctx

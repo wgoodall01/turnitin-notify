@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "nf start -j Procfile.dev",
     "migrate": "cd db && yarn run --silent migrate",
-    "db": "./dev/pgstart.sh"
+    "db": "./dev/pgstart.sh",
+    "psql": "./dev/psql.sh"
   },
   "workspaces": ["server", "client", "db"],
   "devDependencies": {

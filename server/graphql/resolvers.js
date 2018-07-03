@@ -16,6 +16,7 @@ const resolvers = {
   Query: {
     async me(root, args, ctx) {
       const user = await User.get(ctx.user.id, ctx);
+      ctx.db.commit(); // in bg, read-only stuff.
       return user;
     }
   },
@@ -38,6 +39,7 @@ const resolvers = {
         tz: user.turnitinTz,
 
         status(line) {
+          console.log('ti log line:', line);
           logs.push(line);
         }
       });
@@ -49,12 +51,7 @@ const resolvers = {
       await user.save();
 
       await ctx.db.commit();
-      return [
-        JSON.stringify(newCourses, null, 2),
-        JSON.strinfity(delta, null, 2),
-        delta.map(e => format.formatMessage(e)).join('\n'),
-        logs.join('\n')
-      ];
+      return delta.map(e => format.formatMessage(e));
     }
   },
 
