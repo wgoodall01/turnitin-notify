@@ -8,7 +8,8 @@ const ctx = {
   turnitin: require('server/lib/turnitin'),
   TURNITIN_EMAIL: process.env.TURNITIN_EMAIL,
   TURNITIN_PW: process.env.TURNITIN_PW,
-  User: require('server/models/User').default
+  User: require('server/models/User').default,
+  Worker: require('server/worker.js').default
 };
 
 console.log(Object.keys(ctx).join(', '));

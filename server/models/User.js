@@ -2,32 +2,42 @@ import pick from 'lodash/pick';
 import assert from 'assert';
 
 class User {
-  _fields = [
+  static fields = [
     'id',
     'turnitinEmail',
     'turnitinPassword',
     'turnitinTz',
     'phone',
-    'prefs',
+    'checkInterval',
     'updated',
+    'workerId',
+    'workerLockStart',
     'courses'
   ];
 
   constructor(props, ctx) {
-    this._ctx = ctx || {};
+    // non-enumerable but read/writable.
+    Object.defineProperty(this, 'ctx', {value: ctx || {}, enumerable: false});
 
-    const defaults = {prefs: {}, courses: null, updated: null};
-    Object.assign(this, defaults, pick(props, this._fields));
+    const defaults = {courses: null, updated: null};
+    Object.assign(this, defaults, pick(props, User.fields));
     assert(this.id, 'User must have `id`');
     assert(this.turnitinEmail, 'User must have `turnitinEmail`');
     assert(this.turnitinPassword, 'User must have `turnitinPassword`');
+    assert(this.turnitinTz, 'User must have `turnitinTz`');
+    assert(this.phone, 'User must have `phone`');
+    assert(this.checkInterval, 'User must have `checkInterval`');
   }
 
   static async get(id, ctx) {
+    if (!this.ctx.db) {
+      throw new Error("Can't get() without this.ctx.db");
+    }
+
     const res = await ctx
       .db('users')
       .where({id})
-      .select(this._fields);
+      .select(User.fields);
     console.log(res);
 
     const props = res[0];
@@ -39,18 +49,22 @@ class User {
   }
 
   async save() {
+    if (!this.ctx.db) {
+      throw new Error("Can't save() without this.ctx.db");
+    }
+
     // Stringify the courses, so node-postgres doesn't think it's a pg array.
-    const data = {...pick(this, this._fields), courses: JSON.stringify(this.courses)};
+    const data = {...pick(this, User.fields), courses: JSON.stringify(this.courses)};
 
     // Try updating
-    const rowsChanged = await this._ctx
+    const rowsChanged = await this.ctx
       .db('users')
       .where({id: this.id})
       .update(data);
 
     if (rowsChanged === 0) {
       // insert record instead
-      await this._ctx.db('users').insert(data);
+      await this.ctx.db('users').insert(data);
     }
   }
 }

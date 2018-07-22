@@ -20,10 +20,11 @@ function snakeToCamel(str) {
   return str.replace(/(?!^)(\_\w)/g, e => e[1].toUpperCase());
 }
 
+console.log('loading knex...');
+console.log(knexfile[env]);
+
 module.exports = knex({
   ...knexfile[env],
-
-  debug: env === 'development',
 
   // Both of these are from the knex documentation examples.
   postProcessResponse: (result, queryContext) => {
@@ -32,6 +33,8 @@ module.exports = knex({
       return result.map(record => mapKeys(record, (val, key) => snakeToCamel(key)));
     } else if (typeof result === 'string') {
       return snakeToCamel(e);
+    } else if (typeof result === 'object' && result !== null) {
+      return mapKeys(result, (val, key) => snakeToCamel(key));
     } else {
       return result;
     }

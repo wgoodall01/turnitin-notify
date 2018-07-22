@@ -1,3 +1,5 @@
 pgdata
 pgcid
 mock_user.sql
+_test.js
+test.js

@@ -12,12 +12,15 @@ exports.up = function(knex, Promise) {
 
       -- Notification preferences.
       phone varchar(15) not null,
-      prefs jsonb default '{}'::json,
+      check_interval interval not null default '10 minutes',
 
-      -- Latest course data.
-      updated timestamp,
+      -- Fetched course data.
+      updated timestamp with time zone,
+      worker_id uuid, 
+      worker_lock_start timestamp with time zone,
       courses jsonb default 'null'::json
     );
+
   `);
 };
 

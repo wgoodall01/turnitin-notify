@@ -11,7 +11,9 @@
     "dev": "nf start -j Procfile.dev",
     "migrate": "cd db && yarn run --silent migrate",
     "db": "./dev/pgstart.sh",
-    "psql": "./dev/psql.sh"
+    "psql": "./dev/psql.sh",
+    "repl":
+      "node -r babel-register --inspect --experimental-repl-await ./dev/repl.js"
   },
   "workspaces": ["server", "client", "db"],
   "devDependencies": {
