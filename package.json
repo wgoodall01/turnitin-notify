@@ -7,8 +7,14 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "dotenv": "^4.0.0",
-    "request": "^2.83.0",
+    "request": "^2.84.0",
     "request-promise": "^4.2.2",
-    "twilio": "^3.9.1"
-  }
+    "twilio": "^3.17.1",
+    "snyk": "^1.116.2"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
